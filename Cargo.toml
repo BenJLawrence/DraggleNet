@@ -1,6 +1,8 @@
-[package]
-name = "DraggleNet"
-version = "0.1.0"
-edition = "2024"
+[workspace]
+members = [
+    "DraggleNetClient",
+    "DraggleNetServer"
+]
 
-[dependencies]
+[workspace.dependencies]
+tokio = "1.43.0"
