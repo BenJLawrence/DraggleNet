@@ -1,8 +1,7 @@
 [workspace]
 members = [
     "DraggleNetClient",
-    "DraggleNetServer"
-]
+    "DraggleNetServer"]
 
 [workspace.dependencies]
 tokio = { version = "1.43.0", features = ["macros", "rt-multi-thread"] }
@@ -11,3 +10,15 @@ prost = "0.13.5"
 tonic-build = "0.12.3"
 prost-build = "0.13.5"
 anyhow = "1.0.96"
+
+[profile]
+
+[profile.wasm-dev]
+inherits = "dev"
+opt-level = 1
+
+[profile.server-dev]
+inherits = "dev"
+
+[profile.android-dev]
+inherits = "dev"
